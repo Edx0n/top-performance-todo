@@ -78,6 +78,4 @@ npm run type-check   # tsc --noEmit
 | `npm run lint`      | Lint with `next lint`             |
 | `npm run type-check`| Strict TypeScript verification    |
 
----
 
-Made with ⚡ by Magma Software House.

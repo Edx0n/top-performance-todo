@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(wc -l src/pages/*.jsx src/components/*.jsx)",
+      "Bash(npm install:*)",
+      "Bash(grep -n \"data-theme\\\\|\\\\[data-theme\\\\|:root\\\\|--background\\\\|--foreground\\\\|html\\\\\\\\.light\\\\|\\\\\\\\.light \" x:/PROJETOS/magmasoftwarehouse/magmasoftwarehouse/src/index.css)",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -Command \"& { . 'X:\\\\SCRIPTS\\\\jiggler.ps1'; Test-PresenceSpoofing }\")"
+    ]
+  },
+  "mcpServers": {
+    "postgres-readonly": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "C:/repos/respos_testes/mcpQyonServices_BD/src/McpPostgresReadOnly/appsettings.json:/app/appsettings.json",
+        "mcp-postgres-readonly"
+      ],
+      "transport": "stdio"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "transport": "stdio"
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/mcp-chrome-devtools"
+      ],
+      "transport": "stdio"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ],
+      "transport": "stdio"
+    }
+  }
+}
